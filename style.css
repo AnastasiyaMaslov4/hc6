@@ -209,7 +209,7 @@ padding: 14px 38px 13px 38px;
     background-color: #F16D7F;
 }
 
-@media (max-width: 768px) and (min-width: 425px) {
+@media (max-width: 1024px) and (min-width: 768px) {
     
     .top {
         height: 368px;
