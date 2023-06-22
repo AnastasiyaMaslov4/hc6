@@ -531,6 +531,10 @@ line-height: 19px;
         line-height: 29px;
     }
 
+    .menu {
+        left: -150px;
+    }
+
     .categories {
         gap: 20px;
     }
@@ -572,6 +576,10 @@ line-height: 19px;
     .navigation {
         justify-content: end;
         gap: 0;
+    }
+
+    .menu {
+        left: -180px;
     }
 
     .top {
@@ -657,6 +665,10 @@ line-height: 19px;
 
     .sub_text_2 {
     line-height: 36px;
+    }
+
+    .email_input {
+        max-width: 150px;
     }
 
 
