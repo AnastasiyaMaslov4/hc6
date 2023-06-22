@@ -1,3 +1,17 @@
+@keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
 * {
     padding: 0;
     margin: 0;
@@ -53,6 +67,7 @@ button {
 
 .menu {
     position: absolute;
+    z-index: 2;
     top: 52px;
     left: 0;
     background-color: #FFFFFF;
@@ -153,6 +168,7 @@ line-height: 14px;
     font-size: 48px;
     line-height: 58px;
     color: #222222;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .title_2 {
@@ -160,6 +176,7 @@ line-height: 14px;
     font-size: 32px;
     line-height: 38px;
     color: #222222;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.3s both;
 }
 
 .categories {
@@ -178,6 +195,12 @@ line-height: 14px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.category_item:hover {
+    transform: scale(1.05);
 }
 
 .cat_text_small {
@@ -249,6 +272,7 @@ margin-bottom: 48px;
     width: 360px;
     background: #F8F8F8;
     position: relative;
+    text-decoration: none;
 }
 
 .hover_item {
@@ -430,6 +454,7 @@ color: #222224;
 opacity: 0.67;
 border-radius: 25px 0 0 25px;
 padding-left: 22px;
+padding-right: 22px;
 border: none;
 }
 
