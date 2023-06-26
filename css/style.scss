@@ -1,3 +1,5 @@
+@import 'vars';
+
 @keyframes text-focus-in {
     0% {
       -webkit-filter: blur(12px);
@@ -10,21 +12,6 @@
       opacity: 1;
     }
   }
-
-// Переменные цвета
-
-$darkBackground: #222222;
-$mainTextColor: #6F6E6E;
-$activePink: #F16D7F;
-$whiteText: #FBFBFB;
-
-// Ширина сетки сайта
-
-$siteWidth: 1140px;
-
-// Пробел между айтемами
-
-$standartGap: 30px;
   
 
 * {
@@ -53,9 +40,7 @@ button {
 .header {
     height: 75px;
     background: $darkBackground;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include display-flex-horizontal();
 
     &__div {
         display: flex;
@@ -107,8 +92,7 @@ button {
     top: 52px;
     left: -100%;
     background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
+    @include display-flex-vertical(0px);
     align-items: start;
     text-align: left;
     width: 180px;
@@ -134,9 +118,7 @@ margin-bottom: 4px;
     }
 
     &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 11px;
+        @include display-flex-vertical(11px);
         align-items: start;
         font-weight: 400;
     font-size: 14px;
@@ -202,12 +184,11 @@ margin-bottom: 4px;
     margin-left: 16px;
 
     &__item {
-        display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    transition: transform 0.3s;
+        @include display-flex-vertical(0px);
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: transform 0.3s;
 
         &_text_small {
             font-weight: 400;
@@ -249,8 +230,7 @@ margin-bottom: 4px;
 }
 
 .items {
-    display: flex;
-    flex-direction: column;
+    @include display-flex-vertical(0px);
     align-items: center;
 
     &__title {
@@ -361,9 +341,7 @@ margin-bottom: 4px;
 }
 
 .advantages {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include display-flex-horizontal();
     background: $darkBackground;
     padding-top: 104px;
     padding-bottom: 104px;
@@ -395,9 +373,7 @@ margin-bottom: 4px;
     background-size: cover;
     padding-top: 97px;
     padding-bottom: 156px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include display-flex-horizontal();
 
     &__quote {
         max-width: 360px;
@@ -417,8 +393,7 @@ margin-bottom: 4px;
     }
 
     &__form {
-        display: flex;
-        flex-direction: column;
+        @include display-flex-vertical(0px);
         align-items: center;
 
         &_text_1 {
@@ -506,9 +481,7 @@ margin-bottom: 4px;
 font-size: 16px;
 line-height: 19px;
     color: $whiteText;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include display-flex-horizontal();
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -532,9 +505,7 @@ line-height: 19px;
     background-color: #F8F3F4;
     padding-top: 60px;
     padding-bottom: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include display-flex-horizontal();
 
     &__title{
         color: $activePink;
@@ -590,8 +561,7 @@ line-height: 19px;
 .product_info {
     position: relative;
     top: -65px;
-    display: flex;
-    flex-direction: column;
+    @include display-flex-vertical(0px);
     align-items: center;
     border: #EAEAEA 1px solid;
     padding: 65px 250px;
@@ -645,6 +615,29 @@ line-height: 19px;
             align-items: center;
             gap: 9px;
         }
+
+        &__details {
+            position: relative;
+        }
+
+        &__list{
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 24px;
+            @include display-flex-vertical(6px);
+            justify-content: center;
+            align-items: start;
+            padding: 7px 9px;
+            background-color: #FFF;
+            box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+
+            &__div {
+                display: flex;
+                align-items: center;
+                gap: 9px;
+            }
+        }
     }
 
     &__btn {
@@ -656,6 +649,20 @@ line-height: 19px;
         align-items: center;
         gap: 23px;
         padding: 14px 56px 9px 23px;
+        transition: all 0.3s;
+    }
+
+    &__btn:hover {
+        color: #FFFFFF;
+        background-color: $activePink;
+    }
+
+    &__btn:hover .product_info__btn__svg path{
+        fill: #FFFFFF;
+    }
+
+    &__btn__svg path{
+        transition: fill 0.3s;
     }
 }
 
@@ -696,8 +703,7 @@ line-height: 19px;
     }
 
     .advantages {
-        flex-direction: column;
-        gap: 48px;
+        @include display-flex-vertical(48px);
         padding-top: 48px;
         padding-bottom: 64px;
     }
@@ -707,8 +713,7 @@ line-height: 19px;
     }
 
     .subscribe_info {
-        flex-direction: column;
-        gap: 48px;
+        @include display-flex-vertical(48px);
         padding-top: 64px;
         padding-bottom: 140px;
     }
@@ -782,8 +787,7 @@ line-height: 19px;
     }
 
     .categories {
-        display: flex;
-        flex-direction: column;
+        @include display-flex-vertical(0px);
         justify-content: center;
         align-items: stretch;
         padding-bottom: 64px;
@@ -807,8 +811,7 @@ line-height: 19px;
     }
 
     .advantages {
-        flex-direction: column;
-        gap: 47px;
+        @include display-flex-vertical(48px);
         padding-top: 48px;
         padding-bottom: 81px;
         padding-left: 14px;
@@ -816,8 +819,7 @@ line-height: 19px;
     }
 
     .subscribe_info {
-        flex-direction: column;
-        gap: 59px;
+        @include display-flex-vertical(59px);
         padding-top: 64px;
         padding-bottom: 109px;
     }
@@ -850,8 +852,7 @@ line-height: 19px;
     .top_nav {
         padding-top: 24px;
         padding-bottom: 46px;
-        flex-direction: column;
-        gap: 32px;
+        @include display-flex-vertical(32px);
     }
 
     .product_pic_div__img{

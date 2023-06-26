@@ -83,6 +83,7 @@ button {
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  gap: 0px;
   align-items: start;
   text-align: left;
   width: 180px;
@@ -170,6 +171,7 @@ button {
 .categories__item {
   display: flex;
   flex-direction: column;
+  gap: 0px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -213,6 +215,7 @@ button {
 .items {
   display: flex;
   flex-direction: column;
+  gap: 0px;
   align-items: center;
 }
 .items__title {
@@ -364,6 +367,7 @@ button {
 .subscribe_info__form {
   display: flex;
   flex-direction: column;
+  gap: 0px;
   align-items: center;
 }
 .subscribe_info__form_text_1 {
@@ -528,6 +532,7 @@ button {
   top: -65px;
   display: flex;
   flex-direction: column;
+  gap: 0px;
   align-items: center;
   border: #EAEAEA 1px solid;
   padding: 65px 250px;
@@ -577,6 +582,28 @@ button {
   align-items: center;
   gap: 9px;
 }
+.product_info__options__details {
+  position: relative;
+}
+.product_info__options__list {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+  align-items: start;
+  padding: 7px 9px;
+  background-color: #FFF;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+}
+.product_info__options__list__div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
 .product_info__btn {
   border: #FF6A6A 1px solid;
   color: #F26376;
@@ -586,6 +613,17 @@ button {
   align-items: center;
   gap: 23px;
   padding: 14px 56px 9px 23px;
+  transition: all 0.3s;
+}
+.product_info__btn:hover {
+  color: #FFFFFF;
+  background-color: #F16D7F;
+}
+.product_info__btn:hover .product_info__btn__svg path {
+  fill: #FFFFFF;
+}
+.product_info__btn__svg path {
+  transition: fill 0.3s;
 }
 
 .items__list__random {
@@ -618,6 +656,7 @@ button {
     gap: 16px;
   }
   .advantages {
+    display: flex;
     flex-direction: column;
     gap: 48px;
     padding-top: 48px;
@@ -627,6 +666,7 @@ button {
     max-width: 360px;
   }
   .subscribe_info {
+    display: flex;
     flex-direction: column;
     gap: 48px;
     padding-top: 64px;
@@ -686,6 +726,7 @@ button {
   .categories {
     display: flex;
     flex-direction: column;
+    gap: 0px;
     justify-content: center;
     align-items: stretch;
     padding-bottom: 64px;
@@ -704,14 +745,16 @@ button {
     gap: 16px;
   }
   .advantages {
+    display: flex;
     flex-direction: column;
-    gap: 47px;
+    gap: 48px;
     padding-top: 48px;
     padding-bottom: 81px;
     padding-left: 14px;
     padding-right: 14px;
   }
   .subscribe_info {
+    display: flex;
     flex-direction: column;
     gap: 59px;
     padding-top: 64px;
@@ -738,6 +781,7 @@ button {
   .top_nav {
     padding-top: 24px;
     padding-bottom: 46px;
+    display: flex;
     flex-direction: column;
     gap: 32px;
   }

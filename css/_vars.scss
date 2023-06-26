@@ -1,0 +1,28 @@
+// Переменные цвета
+
+$darkBackground: #222222;
+$mainTextColor: #6F6E6E;
+$activePink: #F16D7F;
+$whiteText: #FBFBFB;
+
+// Ширина сетки сайта
+
+$siteWidth: 1140px;
+
+// Пробел между айтемами
+
+$standartGap: 30px;
+
+// Миксины 
+
+@mixin display-flex-horizontal() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+@mixin display-flex-vertical($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
