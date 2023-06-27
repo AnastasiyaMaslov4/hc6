@@ -89,8 +89,8 @@ button {
 .menu {
     position: absolute;
     z-index: 2;
-    top: 52px;
     left: -100%;
+    top: 52px;
     background-color: #FFFFFF;
     @include display-flex-vertical(0px);
     align-items: start;
@@ -99,6 +99,25 @@ button {
     padding: 32px;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
     visibility: hidden;
+
+    &:hover {
+        visibility: visible;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        height: 52px;
+        background-color: transparent;
+        width: 244px;
+        top: -35px;
+        left: 0px;
+    }
+
+    &::before:hover {
+        visibility: visible;
+    }
 
     &__title{
         font-weight: 700;
@@ -134,6 +153,10 @@ margin-bottom: 4px;
     line-height: 17px;
     color: $mainTextColor;
     text-decoration: none;
+    }
+
+    &__link:hover a {
+        color: $activePink;
     }
 }
 

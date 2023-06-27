@@ -78,8 +78,8 @@ button {
 .menu {
   position: absolute;
   z-index: 2;
-  top: 52px;
   left: -100%;
+  top: 52px;
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -90,6 +90,22 @@ button {
   padding: 32px;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   visibility: hidden;
+}
+.menu:hover {
+  visibility: visible;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  height: 52px;
+  background-color: transparent;
+  width: 244px;
+  top: -35px;
+  left: 0px;
+}
+.menu::before:hover {
+  visibility: visible;
 }
 .menu__title {
   font-weight: 700;
@@ -124,6 +140,9 @@ button {
   line-height: 17px;
   color: #6F6E6E;
   text-decoration: none;
+}
+.menu__link:hover a {
+  color: #F16D7F;
 }
 
 .top {
