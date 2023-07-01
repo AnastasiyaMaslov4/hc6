@@ -511,16 +511,20 @@ button {
   font-weight: 300;
   font-size: 14px;
   line-height: 16.8px;
-  gap: 4px;
 }
 .top_nav__list__link a {
   color: #636363;
   text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-
-.active__link a {
-  font-weight: 700;
+.top_nav__list__link:not(:last-child)::after {
+  content: "/";
+  color: #636363;
+}
+.top_nav__list__link:last-child a {
   color: #F16D7F;
+  font-weight: 700;
 }
 
 .product_slider {

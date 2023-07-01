@@ -540,18 +540,24 @@ line-height: 19px;
         font-weight: 300;
         font-size: 14px;
         line-height: 16.8px;
-        gap: 4px;
 
         &__link a {
             color: #636363;
             text-decoration: none;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        &__link:not(:last-child)::after {
+            content: '/';
+            color: #636363;
+        }
+
+        &__link:last-child a{
+            color: $activePink;
+            font-weight: 700;
         }
     }
-}
-
-.active__link a {
-    font-weight: 700;
-    color: $activePink;
 }
 
 .product_slider {
