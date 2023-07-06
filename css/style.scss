@@ -1034,6 +1034,127 @@ summary::-webkit-details-marker {
     }
 }
 
+// Страница регистрации
+
+.registration{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 64px;
+    padding-bottom: 96px;
+    &__form{
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        &__subtitle{
+            color: $darkBackground;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            margin-bottom: 20px;
+        }
+        &__input{
+            width: 90%;
+            border: #a4a4a4 solid 1px;
+            padding: 13px 16px 16px;
+            font-family: 'Lato';
+            font-size: 13px;
+            line-height: 16px;
+            color: #a4a4a4;
+            font-weight: 300;
+            margin-bottom: 21px;
+            &:focus{
+                outline: none;
+            }
+        }
+        &__radiobtns {
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            font-size: 11px;
+            line-height: 13px;
+            color: $darkBackground;
+            margin-bottom: 33px;
+        }
+        &__label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        &__hint{
+            font-size: 13px;
+            line-height: 16px;
+            color: #a4a4a4;
+            font-weight: 300;
+            margin-bottom: 39px;
+        }
+        &__button{
+            background-color: $activePink;
+            color: #FFF;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 16px 20px 16px 29px;
+            transition: all 0.3s;
+            &__svg{
+                transition: all 0.3s;
+            }
+            &:hover{
+                color: $activePink;
+                background-color: #FFF;
+                border-inline: 1px solid $activePink;
+            }
+            &:hover &__svg {
+                transform: translateX(5px);
+            }
+            &:hover &__svg path{
+                fill: $activePink;
+            }
+        }
+    }
+
+    &__loyalty{
+        max-width: 652px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        &__title{
+            color: $darkBackground;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 300;
+        }
+        &__text{
+            color: $darkBackground;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 300;
+        }
+        &__list{
+            color: $darkBackground;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 300;
+            list-style: url(../img/Vector.svg) inside;
+        }
+        &__li{
+            margin-bottom: 16px;
+            
+        }
+    }
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
     .header {
         padding-left: 32px;
