@@ -52,6 +52,7 @@ button {
         display: flex;
     align-items: center;
     gap: 33px;
+    padding-right: 8px;
 
         &__menu_btn {
             position: relative;
@@ -89,7 +90,7 @@ button {
 .menu {
     position: absolute;
     z-index: 2;
-    left: -100%;
+    left: -160%;
     top: 52px;
     background-color: #FFFFFF;
     @include display-flex-vertical(0px);
@@ -1022,7 +1023,7 @@ summary::-webkit-details-marker {
         }
 
         &__btn {
-            padding: 16px 42px;
+            padding: 16px 40px;
             width: 100%;
             background-color: $activePink;
             color: #FFF;
@@ -1040,6 +1041,7 @@ summary::-webkit-details-marker {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 22px;
     padding-top: 64px;
     padding-bottom: 96px;
     &__form{
@@ -1129,23 +1131,14 @@ summary::-webkit-details-marker {
         gap: 22px;
         align-items: flex-start;
         justify-content: flex-start;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 300;
+        color: $darkBackground;
         &__title{
-            color: $darkBackground;
-            font-size: 24px;
-            line-height: 29px;
-            font-weight: 300;
-        }
-        &__text{
-            color: $darkBackground;
-            font-size: 24px;
-            line-height: 29px;
             font-weight: 300;
         }
         &__list{
-            color: $darkBackground;
-            font-size: 24px;
-            line-height: 29px;
-            font-weight: 300;
             list-style: url(../img/Vector.svg) inside;
         }
         &__li{
@@ -1183,7 +1176,7 @@ summary::-webkit-details-marker {
         gap: 20px;
     }
 
-    .items_list {
+    .items__list {
         gap: 16px;
     }
 
@@ -1223,6 +1216,49 @@ summary::-webkit-details-marker {
 
     .random_card:last-child {
         display: none;
+    }
+
+    // Catalog page 
+
+    .catalog__card:last-child {
+        display: none;
+    }
+
+    // Cart page
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+        &__btn__div {
+            justify-content: center;
+            gap: 48px;
+            padding-top: 0;
+        }
+        &__column2 {
+            @include display-flex-horizontal();
+            align-self: stretch;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        &__form {
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+
+    // Registartion page
+
+
+    .registration {
+        padding-left: 16px;
+        padding-right: 16px;
+        &__loyalty {
+            font-size: 16px;
+            line-height: 19px;
+        }
     }
 
 }

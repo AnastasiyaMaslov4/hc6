@@ -47,6 +47,7 @@ button {
   display: flex;
   align-items: center;
   gap: 33px;
+  padding-right: 8px;
 }
 .header__navigation__menu_btn {
   position: relative;
@@ -78,7 +79,7 @@ button {
 .menu {
   position: absolute;
   z-index: 2;
-  left: -100%;
+  left: -160%;
   top: 52px;
   background-color: #FFFFFF;
   display: flex;
@@ -974,7 +975,7 @@ summary::-webkit-details-marker {
   color: #F16D7F;
 }
 .cart__sum__btn {
-  padding: 16px 42px;
+  padding: 16px 40px;
   width: 100%;
   background-color: #F16D7F;
   color: #FFF;
@@ -988,6 +989,7 @@ summary::-webkit-details-marker {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 22px;
   padding-top: 64px;
   padding-bottom: 96px;
 }
@@ -1077,24 +1079,15 @@ summary::-webkit-details-marker {
   gap: 22px;
   align-items: flex-start;
   justify-content: flex-start;
-}
-.registration__loyalty__title {
-  color: #222222;
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
-}
-.registration__loyalty__text {
   color: #222222;
-  font-size: 24px;
-  line-height: 29px;
+}
+.registration__loyalty__title {
   font-weight: 300;
 }
 .registration__loyalty__list {
-  color: #222222;
-  font-size: 24px;
-  line-height: 29px;
-  font-weight: 300;
   list-style: url(../img/Vector.svg) inside;
 }
 .registration__loyalty__li {
@@ -1123,7 +1116,7 @@ summary::-webkit-details-marker {
   .categories {
     gap: 20px;
   }
-  .items_list {
+  .items__list {
     gap: 16px;
   }
   .advantages {
@@ -1157,6 +1150,41 @@ summary::-webkit-details-marker {
   }
   .random_card:last-child {
     display: none;
+  }
+  .catalog__card:last-child {
+    display: none;
+  }
+  .cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+  }
+  .cart__btn__div {
+    justify-content: center;
+    gap: 48px;
+    padding-top: 0;
+  }
+  .cart__column2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .cart__form {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .registration {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .registration__loyalty {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 @media (max-width: 767px) and (min-width: 320px) {
