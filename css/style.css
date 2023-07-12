@@ -451,6 +451,7 @@ button {
   opacity: 0.67;
 }
 .subscribe_info__form_btn {
+  font-family: "Lato", sans-serif;
   width: 100px;
   font-weight: 400;
   font-size: 14px;
@@ -975,6 +976,8 @@ summary::-webkit-details-marker {
   color: #F16D7F;
 }
 .cart__sum__btn {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   padding: 16px 40px;
   width: 100%;
   background-color: #F16D7F;
@@ -1046,6 +1049,7 @@ summary::-webkit-details-marker {
   margin-bottom: 39px;
 }
 .registration__form__button {
+  font-family: "Lato", sans-serif;
   background-color: #F16D7F;
   color: #FFF;
   font-size: 14px;
@@ -1151,6 +1155,9 @@ summary::-webkit-details-marker {
   .random_card:last-child {
     display: none;
   }
+  .filter_box {
+    padding-left: 16px;
+  }
   .catalog__card:last-child {
     display: none;
   }
@@ -1187,7 +1194,7 @@ summary::-webkit-details-marker {
     line-height: 19px;
   }
 }
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 767px) {
   .header {
     padding-left: 16px;
     padding-right: 16px;
@@ -1206,18 +1213,18 @@ summary::-webkit-details-marker {
     justify-content: center;
     height: 363px;
   }
-  .top_pic {
+  .top__pic {
     display: none;
   }
-  .top_title {
+  .top__title {
     width: auto;
   }
-  .title_1 {
+  .top__title_1 {
     font-weight: 900;
     font-size: 38px;
     line-height: 46px;
   }
-  .title_2 {
+  .top__title_2 {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
@@ -1225,22 +1232,22 @@ summary::-webkit-details-marker {
   .categories {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 32px;
     justify-content: center;
     align-items: stretch;
     padding-bottom: 64px;
   }
-  .category_item {
+  .categories__item {
     height: 248px;
     background-size: cover;
   }
   .cat_item_big {
     height: 111px;
   }
-  .items_text {
+  .items__text {
     margin-bottom: 64px;
   }
-  .items_list {
+  .items__list {
     gap: 16px;
   }
   .advantages {
@@ -1264,10 +1271,6 @@ summary::-webkit-details-marker {
     font-size: 18px;
     line-height: 22px;
   }
-  .footer {
-    flex-direction: column-reverse;
-    gap: 40px;
-  }
   .subscribe_info__form_text_1 {
     line-height: 36px;
   }
@@ -1276,6 +1279,10 @@ summary::-webkit-details-marker {
   }
   .subscribe_info__form_email_input {
     max-width: 150px;
+  }
+  .footer {
+    flex-direction: column-reverse;
+    gap: 40px;
   }
   .top_nav {
     padding-top: 24px;
@@ -1296,5 +1303,114 @@ summary::-webkit-details-marker {
   }
   .random_card:last-child {
     display: none;
+  }
+  .filter_box {
+    gap: 0;
+    justify-content: space-between;
+    padding-right: 16px;
+  }
+  .filter {
+    width: 37px;
+    padding-left: 16px;
+  }
+  .filter__heading {
+    width: 37px;
+  }
+  .filter__name {
+    display: none;
+  }
+  .filter__svg {
+    height: 25px;
+    width: 37px;
+  }
+  .filter__open {
+    padding-top: 56px;
+    width: 80vw;
+  }
+  .top_nav {
+    padding-top: 50px;
+    padding-bottom: 69px;
+  }
+  .cart {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+  }
+  .cart__card {
+    grid-template-columns: 1fr 1fr;
+    padding-right: 55px;
+  }
+  .cart__card__img {
+    height: 100%;
+  }
+  .cart__card__div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .cart__card__title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 25px;
+  }
+  .cart__card__text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .cart__card__input {
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .cart__card__input::-moz-placeholder {
+    font-size: 14px;
+  }
+  .cart__card__input::placeholder {
+    font-size: 14px;
+  }
+  .cart__card__close {
+    top: 12px;
+    right: 12px;
+  }
+  .cart__btn__div {
+    justify-content: space-between;
+    padding-top: 0;
+    width: 100%;
+  }
+  .cart__btn {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 9px 18px;
+  }
+  .cart__column2 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-self: stretch;
+  }
+  .cart__form {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .cart__sum__btn {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .registration {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .registration__form {
+    max-width: 100%;
+  }
+  .registration__loyalty {
+    font-size: 16px;
+    line-height: 19px;
   }
 }/*# sourceMappingURL=style.css.map */

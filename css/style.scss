@@ -477,6 +477,7 @@ margin-bottom: 4px;
         }
 
         &_btn {
+            font-family: "Lato", sans-serif;
             width: 100px;
             font-weight: 400;
             font-size: 14px;
@@ -1023,6 +1024,8 @@ summary::-webkit-details-marker {
         }
 
         &__btn {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
             padding: 16px 40px;
             width: 100%;
             background-color: $activePink;
@@ -1096,6 +1099,7 @@ summary::-webkit-details-marker {
             margin-bottom: 39px;
         }
         &__button{
+            font-family: "Lato", sans-serif;
             background-color: $activePink;
             color: #FFF;
             font-size: 14px;
@@ -1220,6 +1224,10 @@ summary::-webkit-details-marker {
 
     // Catalog page 
 
+    .filter_box {
+        padding-left: 16px;
+    }
+
     .catalog__card:last-child {
         display: none;
     }
@@ -1263,7 +1271,7 @@ summary::-webkit-details-marker {
 
 }
 
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 767px) {
     .header {
         padding-left: 16px;
         padding-right: 16px;
@@ -1285,49 +1293,44 @@ summary::-webkit-details-marker {
     .top {
         justify-content: center;
         height: 363px;
-    }
-
-    .top_pic {
-        display: none;
-    }
-
-    .top_title {
-        width: auto;
-    }
-
-    .title_1 {
-        font-weight: 900;
-        font-size: 38px;
-        line-height: 46px;
-    }
-
-    .title_2 {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
+        &__pic {
+            display: none;
+        }
+        &__title {
+            width: auto;
+            &_1{
+                font-weight: 900;
+                font-size: 38px;
+                line-height: 46px;
+            }
+            &_2{
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px; 
+            }
+        }
     }
 
     .categories {
-        @include display-flex-vertical(0px);
+        @include display-flex-vertical(32px);
         justify-content: center;
         align-items: stretch;
         padding-bottom: 64px;
-    }
-
-    .category_item {
-        height: 248px;
-        background-size: cover;
+        &__item {
+            height: 248px;
+            background-size: cover;
+        }
     }
 
     .cat_item_big {
         height: 111px;
     }
 
-    .items_text {
+    .items__text {
         margin-bottom: 64px;
     }
 
-    .items_list {
+    .items__list {
         gap: 16px;
     }
 
@@ -1343,29 +1346,25 @@ summary::-webkit-details-marker {
         @include display-flex-vertical(59px);
         padding-top: 64px;
         padding-bottom: 109px;
-    }
-
-    .subscribe_info__quote_text {
-        font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+        &__quote_text {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            }
+        &__form_text_1 {
+            line-height: 36px;
+            }
+        &__form_text_2 {
+            line-height: 36px;
+            }
+        &__form_email_input {
+            max-width: 150px;
+        }
     }
 
     .footer {
         flex-direction: column-reverse;
         gap: 40px;
-    }
-
-    .subscribe_info__form_text_1 {
-    line-height: 36px;
-    }
-
-    .subscribe_info__form_text_2 {
-    line-height: 36px;
-    }
-
-    .subscribe_info__form_email_input {
-        max-width: 150px;
     }
 
     // Product page 
@@ -1393,5 +1392,117 @@ summary::-webkit-details-marker {
         display: none;
     }
 
+    // Catalog
+
+    .filter_box {
+        gap: 0;
+        justify-content: space-between;
+        padding-right: 16px;
+    }
+
+    .filter {
+        width: 37px;
+        padding-left: 16px;
+        &__heading {
+            width: 37px;
+        }
+        &__name{
+            display: none;
+        }
+        &__svg {
+            height: 25px;
+            width: 37px;
+        }
+        &__open {
+            padding-top: 56px;
+            width: 80vw;
+        }
+    }
+
+    // Cart page 
+
+    .top_nav {
+        padding-top: 50px;
+        padding-bottom: 69px;
+    }
+
+    .cart {
+        padding-left: 16px;
+        padding-right: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        &__card {
+            grid-template-columns: 1fr 1fr;
+            padding-right: 55px;
+            &__img {
+                height: 100%;
+            }
+            &__div {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            &__title {
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 25px;
+            }
+            &__text {
+                font-size: 14px;
+                line-height: 17px;
+            }
+            &__input {
+                font-size: 14px;
+                padding-left: 8px;
+                padding-right: 8px;
+                &::placeholder {
+                    font-size: 14px;
+                }
+            }
+            &__close {
+                top: 12px;
+                right: 12px;
+            }
+        }
+        &__btn__div {
+            justify-content: space-between;
+            padding-top: 0;
+            width: 100%;
+        }
+        &__btn {
+            font-size: 12px;
+            line-height: 14px;
+            padding: 9px 18px;
+        }
+        &__column2 {
+            @include display-flex-vertical(48px);
+            align-self: stretch;
+        }
+        &__form {
+            width: 100%;
+            margin-bottom: 0;
+        }
+        &__sum__btn {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    // Registration page 
+
+    .registration {
+        @include display-flex-vertical(40px);
+        padding-left: 16px;
+        padding-right: 16px;
+        &__form {
+            max-width: 100%;
+        }
+        &__loyalty{
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
 
 }
